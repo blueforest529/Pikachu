@@ -1,5 +1,12 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <img :src="img" alt=""/>
   </div>
 </template>
+<script>
+  export default {
+    data : ()=> ({
+      img : require('../assets/img/pickachu.png')
+    })
+  }
+</script>

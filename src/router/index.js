@@ -1,29 +1,38 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Vue from "vue";
+import Router from "vue-router";
+import AboutView from '../views/AboutView.vue'
+import CheckResourcesView from '../views/CheckResourcesView.vue'
+import HowToUseView from '../views/HowToUseView.vue'
+import TranslationRequestView from '../views/TranslationRequestView.vue'
 
-Vue.use(VueRouter)
+Vue.use(Router);
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+const redirectAuth = () => (from, to, next) => {
+    if (store.state.auth.isAuth) return next();
+    next("/login");
+};
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
-
-export default router
+export default new Router({
+    routes: [
+          {
+            path: '/',
+            name: 'about',
+            component: AboutView
+          },
+          {
+            path: '/checkresources',
+            name: 'checkresources',
+            component: CheckResourcesView
+          },
+          {
+            path: '/howtouse',
+            name: 'howtouse',
+            component: HowToUseView
+          },
+          {
+            path: '/translationrequest',
+            name: 'translationrequest',
+            component: TranslationRequestView
+          },
+    ]
+});
