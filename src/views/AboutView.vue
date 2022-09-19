@@ -1,6 +1,7 @@
 <template>
   <div class="about">
-    <img :src="img" alt=""/>
+    대시보드
+
   </div>
 </template>
 <script>
