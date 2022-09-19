@@ -29,13 +29,11 @@ import { getDatabase, ref, child, get, set } from "firebase/database";
     methods: {
         get() {
             const dbRef = ref(this.$firebasedb);
-
             get(child(dbRef, `/volt`)).then((snapshot) => {
                 if (snapshot.exists()) {
                     snapshot.val().forEach(v => {
                         this.list.push(v);
                     });
-                    console.log(this.list)
                 } else {
                     console.log("No data available");
                 }
