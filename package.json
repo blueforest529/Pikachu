@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "pickachu",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -46,5 +46,17 @@
     "rules": {
       "vue/multi-word-component-names": 0
     }
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blueforest529/Pikachu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blueforest529/Pikachu/issues"
+  },
+  "homepage": "https://github.com/blueforest529/Pikachu#readme"
 }
