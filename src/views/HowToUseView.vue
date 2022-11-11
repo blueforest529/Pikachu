@@ -1,12 +1,6 @@
 <template>
   <div style="display: flex; flex-wrap: wrap; flex-direction: row; align-content: flex-start; ">
-    <v-card
-    class="mr-1 mt-2"
-    outlined
-    max-width = "400px"
-    elevation="7"
-    v-for="i in items"
-  >
+    <v-card class="mr-1 mt-2" outlined max-width = "400px" v-for="i in items" >
     <v-list-item three-line>
       <v-list-item-content>
         <v-list-item-title v-html="i.title" class="text-h6">
@@ -50,10 +44,7 @@
           contents : 'O) WAPPLES Control Center <br> X) WAPPLES CC, WCC'
         }
       ]
-    }),
-    components: {
-
-    }
+    })
   }
 </script>
 <style>

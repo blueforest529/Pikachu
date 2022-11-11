@@ -6,8 +6,10 @@
 </template>
 <script>
   export default {
+    mounted() {
+    },
     data : ()=> ({
-      img : require('../assets/img/pickachu.png')
+      
     })
   }
 </script>
