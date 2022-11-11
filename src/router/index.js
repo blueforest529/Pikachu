@@ -1,7 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 import AboutView from '../views/AboutView.vue'
-import CheckResourcesView from '../views/CheckResourcesView.vue'
+import CheckResourcesVolt from '../views/CheckResourcesVolt.vue'
+import CheckResourcesAudit from '../views/CheckResourcesAudit.vue'
+import CheckResourcesCtrl from '../views/CheckResourcesCtrl.vue'
+import CheckResourcesMsg from '../views/CheckResourcesMsg.vue'
 import HowToUseView from '../views/HowToUseView.vue'
 import TranslationRequestView from '../views/TranslationRequestView.vue'
 
@@ -20,9 +23,24 @@ export default new Router({
             component: AboutView
           },
           {
-            path: '/checkresources',
-            name: 'checkresources',
-            component: CheckResourcesView
+            path: '/checkresourcesvolt',
+            name: 'checkresourcesvolt',
+            component: CheckResourcesVolt
+          },
+          {
+            path: '/checkresourcesaudit',
+            name: 'checkresourcesaudit',
+            component: CheckResourcesAudit
+          },
+          {
+            path: '/checkresourcesctrl',
+            name: 'checkresourcesctrl',
+            component: CheckResourcesCtrl
+          },
+          {
+            path: '/checkresourcesmsg',
+            name: 'checkresourcesmsg',
+            component: CheckResourcesMsg
           },
           {
             path: '/howtouse',

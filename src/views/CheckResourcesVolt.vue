@@ -31,8 +31,6 @@ import { getDatabase, ref, child, get, set } from "firebase/database";
         get() {
             const dbRef = ref(this.$firebasedb);
 
-            console.log(dbRef)
-
             get(child(dbRef, `/volt`)).then((snapshot) => {
                 if (snapshot.exists()) {
                     snapshot.val().forEach(v => {

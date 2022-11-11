@@ -1,13 +1,13 @@
 <template>
     <div>
-        <v-navigation-drawer v-model="drawer" app>
+        <v-navigation-drawer app>
             <v-list-item>
                 <v-list-item-icon>
                     <v-icon>mdi-home</v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
                     <v-list-item-title class="text-h6">
-                        Pikachu
+                        리소스
                     </v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
@@ -15,9 +15,7 @@
             <v-divider></v-divider>
             
             <v-list class="red_list">
-                <v-list-item-group
-                    v-model="model"
-                >
+                <v-list-item-group >
                     <v-list-item
                         v-for="(m, index) in menus"
                         :key="index"
@@ -35,13 +33,6 @@
                 </v-list-item-group>
             </v-list>
         </v-navigation-drawer>
-
-        <div style="float:left; margin-left:10px; margin-top:350px; margin-bottom:350px;">
-            <v-icon large color="#367fc4" @click="drawer = menuclick()">
-                {{icon}}
-            </v-icon>
-        </div>
-
     </div>
 </template>
 
@@ -58,8 +49,23 @@
             },
             {
                 icon: 'mdi-needle',
-                text: '리소스 확인',
-                to: '/checkresources'
+                text: 'Volt',
+                to: '/checkresourcesvolt'
+            },
+            {
+                icon: 'mdi-needle',
+                text: 'Audit',
+                to: '/checkresourcesaudit'
+            },
+            {
+                icon: 'mdi-needle',
+                text: 'Msg',
+                to: '/checkresourcesmsg'
+            },
+            {
+                icon: 'mdi-needle',
+                text: 'Ctrl',
+                to: '/checkresourcesctrl'
             },
             {
                 icon: 'mdi-file-chart',
@@ -75,15 +81,7 @@
         model: [{to: '/'}],
     }),
     methods: {
-        menuclick() {
-            if (this.drawer) {
-                this.icon = 'mdi-chevron-right';
-            } else {
-                this.icon = 'mdi-chevron-left';
-            }
-
-            return !this.drawer
-        }
+       
     }
   }
 </script>
