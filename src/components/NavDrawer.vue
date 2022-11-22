@@ -48,22 +48,22 @@
                 to: '/'
             },
             {
-                icon: 'mdi-needle',
+                icon: 'mdi-chevron-double-right',
                 text: 'Volt',
                 to: '/checkresourcesvolt'
             },
             {
-                icon: 'mdi-needle',
+                icon: 'mdi-chevron-double-right',
                 text: 'Audit',
                 to: '/checkresourcesaudit'
             },
             {
-                icon: 'mdi-needle',
+                icon: 'mdi-chevron-double-right',
                 text: 'Msg',
                 to: '/checkresourcesmsg'
             },
             {
-                icon: 'mdi-needle',
+                icon: 'mdi-chevron-double-right',
                 text: 'Ctrl',
                 to: '/checkresourcesctrl'
             },
