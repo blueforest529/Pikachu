@@ -9,3 +9,4 @@
 front - vue.js , vuetify <br>
 back - firebase(실시간 데이터 베이스)
 <br><br>
+![pikachu](https://user-images.githubusercontent.com/22957339/209505428-cfbb2219-3488-475f-9522-ddbcf61baee3.png)
